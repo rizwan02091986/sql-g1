@@ -18,6 +18,9 @@ insert into student (id , name , age , city , marks , grade) values
 (103 , "Haroon" , 40 , "Peshawar" , 50 , "C"),
 (104 , "Atif" , 30 , "Multan" , 40 , "D"),
 (105 , "Haseeb" , 20 , "Karachi" , 90 , "A+1");
+insert into student (id , name , age , city , marks , grade) values
+(106 , "Farooq" , 60 , "Karachi", 70 , "A"),
+(107 , "Hassan" , 50 , "Lahore" , 60 , "B");
 
 select * from student;
 
@@ -34,3 +37,13 @@ select * from student where id = 104;
 select * from student where marks = 90 or grade = "C";
 select * from student where marks = 50 and grade = "C";
 select distinct city from student;
+
+select * from student;
+
+-- update
+-- safe enable
+set sql_safe_updates=0;
+update student
+set grade = "A" where marks = 70;
+-- safe disable
+set sql_safe_updates=1;
