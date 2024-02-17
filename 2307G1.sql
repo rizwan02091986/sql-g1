@@ -47,3 +47,8 @@ update student
 set grade = "A" where marks = 70;
 -- safe disable
 set sql_safe_updates=1;
+
+set sql_safe_updates=0;
+
+update student
+set marks = marks + 5;
