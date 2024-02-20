@@ -48,3 +48,14 @@ update student
 set marks = marks + 5;
 
 select * from student;
+
+-- agreeget Function
+
+select min(marks) from student;
+select max(marks) from student;
+select min(name) from student;
+select max(name) from student;
+select count(city) from student;
+select avg(marks) from student;
+
+select * from student;
