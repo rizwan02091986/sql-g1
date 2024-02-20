@@ -57,5 +57,11 @@ select min(name) from student;
 select max(name) from student;
 select count(city) from student;
 select avg(marks) from student;
+select count(id) from student;
 
 select * from student;
+
+-- Group By
+
+select city , name from student group by city , name;
+select id , age, marks, grade from student group by id, age, marks, grade;
