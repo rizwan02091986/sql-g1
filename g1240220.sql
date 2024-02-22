@@ -68,6 +68,10 @@ select * from student;
 select city , name from student group by city , name;
 select id , age, marks, grade from student group by id, age, marks, grade;
 
+-- having clause
+
+select name, age, marks from student group by name , age, marks having max(marks>=75);
+
 -- order By
 
 select city , name from student order by city , name;
@@ -76,3 +80,7 @@ select * from student order by city asc;
 select * from student order by city desc;
 
 select * from student;
+
+-- delete
+
+delete from student where name = "Rizwan";
