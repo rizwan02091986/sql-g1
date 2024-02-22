@@ -33,6 +33,8 @@ select * from student where age between 20 and 30;
 select * from student;
 select * from student where age>40 or grade = "B";
 select * from student where marks = 90 and grade = "A+"; 
+select * from student where age between 25 and 50 and grade = "A" or city in ("Peshwar", "lahore") and marks>60;
+select * from student where name in ("Ramish", "Yazdan") and city in("karachi", "sukkar") and marks>=70 or age between 30 and 40;
 
 -- update
 -- safe enable
