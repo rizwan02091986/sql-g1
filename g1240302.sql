@@ -125,3 +125,33 @@ select * from dept right join teacher on dept.id = teacher.id;
 select * from dept left join teacher on dept.id = teacher.id
 union
 select * from dept right join teacher on dept.id = teacher.id;
+
+-- alter
+select * from student;
+
+alter table student
+add column car varchar(10);
+
+update student
+set car = "bike" where id= 101;
+update student
+set car = "Honda" where id= 102;
+update student
+set car = "Bike" where id= 103;
+update student
+set car = "Honda" where id= 104;
+update student
+set car = "Bike" where id= 105;
+update student
+set car = "Honda" where id= 106;
+update student
+set car = "Bike" where id= 107;
+
+alter table student change car bike varchar(10);
+
+alter table student
+drop car;
+
+alter table student modify bike varchar(10);
+
+select * from student;
