@@ -1,5 +1,5 @@
-create database g1240220;
-use g1240220;
+create database g1240302;
+use g1240302;
 
 create table student (
 	id int primary key,
@@ -84,3 +84,44 @@ select * from student;
 -- delete
 
 delete from student where name = "Rizwan";
+
+-- forign key
+create table dept(
+	id int primary key,
+    name varchar(15)
+);
+create table teacher(
+	id int primary key,
+    name varchar(10),
+    dept_id int,
+    foreign key (dept_id) references dept (id)
+    on update cascade
+    on delete cascade
+);
+
+insert into dept values 
+(501, "Engineering"),
+(502, "Mdeical"),
+(503, "Social");
+
+insert into teacher values
+(501, "Alex" , 501),
+(502, "Max" , 502),
+(503, "Rossy" , 503);
+
+
+update dept set id = 504 where id = 503;
+
+-- join inner
+select * from dept inner join teacher on dept.id = teacher.id;
+
+-- join left
+select * from dept left join teacher on dept.id = teacher.id;
+
+-- join right
+select * from dept right join teacher on dept.id = teacher.id;
+
+-- full join
+select * from dept left join teacher on dept.id = teacher.id
+union
+select * from dept right join teacher on dept.id = teacher.id;
